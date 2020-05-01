@@ -1,1 +1,32 @@
-<p>article-list works!</p>
+<div class="container">
+  <!-- START ARTICLE FEED -->
+  <section class="articles">
+    <div class="column is-8 is-offset-2" *ngFor="let article of articles">
+      <!-- START ARTICLE -->
+      <div class="card article">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-center">
+              <img src="http://www.radfaces.com/images/avatars/june.jpg" class="author-image" alt="Placeholder image">
+          </div>
+            <div class="media-content has-text-centered">
+              <p class="title article-title">{{ article.title }}</p>
+              <div class="tags has-addons level-item">
+                <span class="tag is-rounded is-info">@yahyanouali</span>
+                <span class="tag is-rounded">{{ article.date | date }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="content article-body">
+            {{ article.desciption }}
+            <h4 class="has-text-centered">
+              Read more >>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <!-- END ARTICLE -->
+    </div>
+  </section>
+  <!-- END ARTICLE FEED -->
+</div>
